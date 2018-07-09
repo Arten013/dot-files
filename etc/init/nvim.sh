@@ -1,8 +1,7 @@
 #/bin/bash
 
-echo "setup nvim"
-if [ ! -e $HOME'/.config/nvim/init.vim' ]; then
-	mkdir -p $HOME'/.config/nvim'
-	ln -s $HOME'/dotfiles/.vimrc' $HOME'/.config/nvim/init.vim'
-	echo '{$HOME}/dotfiles/.vimrc -> {$HOME}/.config/nvim/init.vim'
-fi
+echo "setup nvim "$DOTFILES_DIR"./.nvim"
+
+mkdir -p $HOME'/.config/'
+rm -rf $HOME'/.config/nvim'
+ln -sfnv $DOTFILES_DIR'/.nvim' $HOME'/.config/nvim'
