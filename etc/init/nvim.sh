@@ -6,6 +6,9 @@ if test -z $(which nvim); then
     if [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
         echo "Linux OS"
         if ! test -z $(which apt); then
+            apt install apt-file
+            apt-file update
+
             apt install software-properties-common
 
             add-apt-repository ppa:neovim-ppa/unstable
