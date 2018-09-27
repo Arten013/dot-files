@@ -7,13 +7,13 @@ if test -z $(which nvim); then
         echo "Linux OS"
         if ! test -z $(which apt); then
             apt update
-            apt install apt-file
+            apt install -y apt-file
             apt-file update
             apt-file search add-apt-repository
-            apt install software-properties-common
+            apt install -y software-properties-common
             add-apt-repository ppa:neovim-ppa/unstable
             apt update
-            apt install neovim
+            apt install -y neovim
         fi
     fi
 fi
