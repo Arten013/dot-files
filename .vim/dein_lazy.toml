@@ -19,3 +19,7 @@ repo = 'Shougo/neosnippet'
 depends = ['neosnippet-snippets']
 on_i = 1
 hook_source = 'source $XDG_VIM_HOME/plugins/neosnippet.vim'
+
+[[plugins]]
+repo = 'greyblake/vim-preview'
+on_i = 1
